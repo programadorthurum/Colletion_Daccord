@@ -1,0 +1,41 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>LISTAR DA CATEGORIA</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>ATIVO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let categoria of categorias">
+
+            <td>{{categoria.id}}</td>
+            <td>{{categoria.nome}}</td>
+            <td>{{categoria.ativo}}</td>
+
+            <td><button mat-cell routerLink="/categoria/update/alterar/{{categoria.id}}" color="warn" class="btn btn-danger" style="margin-left: 10px">
+                <i class= "material-icons edit">
+                    edit
+                </i></button>
+            </td>
+
+            <td><button mat-cell (click)="delete(categoria)" color="warn" class="btn btn-danger" style="margin-left: 10px">
+                <i class= "material-icons delete">
+                    delete
+                </i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+        <button mat-raised-button color="warn" (click)="saida()">
+            RETORNAR
+        </button>
+    </div>
+  </div>

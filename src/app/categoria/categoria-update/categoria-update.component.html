@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Alterar Categoria</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" 
+            [(ngModel)] = "categoria.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Ativo" 
+            [(ngModel)] = "categoria.ativo" name="ativo">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="updateCategoria()" color="primary">
+        SALVAR
+    </button>
+    <button mat-raised-button (click)="saida()">
+        CANCELAR
+    </button>
+</mat-card>

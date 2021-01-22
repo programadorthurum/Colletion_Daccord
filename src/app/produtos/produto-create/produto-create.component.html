@@ -1,0 +1,30 @@
+
+<h2>CRIAR PRODUTO</h2>
+
+<div>
+    <form (ngSubmit)= "onSubmit()">
+    <label >Nome
+        <input #nomeProduto [(ngModel)] = "produto.nome" name="nome"></label><br>
+
+    <label>Descrição
+        <input #descricaoProduto [(ngModel)] = "produto.descricao" name="descricao">
+    </label><br>
+
+    <label>Preço Unitário
+        <input #preco_unitarioProduto [(ngModel)] = "produto.preco_unitario" name="preco_unitario">
+    </label><br>
+
+    <label >Unidade
+        <input #unidadeProduto [(ngModel)] = "produto.unidade" name="unidade">
+    </label><br>
+
+<br>
+<button mat-raised-button (click)="save()" color="primary">
+    SALVAR
+</button>
+<button mat-raised-button (click)="saida()">
+    CANCELAR
+</button>
+
+</form>
+</div>

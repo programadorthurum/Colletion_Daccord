@@ -1,0 +1,53 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>CLIENTES CADASTRADOS</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>EMAIL</th>
+            <th>DATA DE NASCIMENTO</th>
+            <th>SEXO</th>
+            <th>NOME SOCIAL</th>
+            <th>APELIDO</th>
+            <th>TELEFONE</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+
+            <td>{{cliente.id}}</td>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.cpf}}</td>
+            <td>{{cliente.email}}</td>
+            <td>{{cliente.dataNascimento}}</td>
+            <td>{{cliente.sexo}}</td>
+            <td>{{cliente.nomeSocial}}</td>
+            <td>{{cliente.apelido}}</td>
+            <td>{{cliente.telefone}}</td>
+
+            <td><button mat-cell routerLink="/clientes/update/alterar/{{cliente.id}}" color="warn" class="btn btn-danger" style="margin-left: 10px">
+              <i class= "material-icons edit">
+                  edit
+              </i></button>
+          </td>
+            <td><button mat-cell (click)="delete(cliente)" color="warn" class="btn btn-danger" style="margin-left: 10px">
+              <i class= "material-icons delete">
+                delete
+            </i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+        <button mat-raised-button color="warn" (click)="saida()">
+            RETORNAR
+        </button>
+    </div>
+    
+  </div>

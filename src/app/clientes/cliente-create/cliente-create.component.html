@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-title>CADASTRO DE CLIENTE</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" 
+            [(ngModel)] = "clientes.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" 
+            [(ngModel)] = "clientes.cpf" name="cpf">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" 
+            [(ngModel)] = "clientes.email" name="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Data de Nascimento" 
+            [(ngModel)] = "clientes.dataNascimento" name="dataNascimento">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Sexo" 
+            [(ngModel)] = "clientes.sexo" name="sexo">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome Social" 
+            [(ngModel)] = "clientes.nomeSocial" name="nomeSocial">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Apelido" 
+            [(ngModel)] = "clientes.apelido" name="apelido">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" 
+            [(ngModel)] = "clientes.telefone" name="telefone">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="save()" color="primary">
+        SALVAR
+    </button>
+    <button mat-raised-button color="warn" (click)="saida()">
+        CANCELAR
+    </button>
+</mat-card>
+
+
+

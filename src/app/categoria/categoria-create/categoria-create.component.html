@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-title>Nova Categoria</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" 
+            [(ngModel)] = "categorias.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Ativo" 
+            [(ngModel)] = "categorias.ativo" name="ativo">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="save()" color="primary">
+        SALVAR
+    </button>
+    <button mat-raised-button (click)="saida()">
+        CANCELAR
+    </button>
+</mat-card>
+
+<!--
+<h2>CRIAR CATEGORIA</h2>
+
+<div>
+    <form (ngSubmit)= "onSubmit()">
+    <label >NOME
+        <input #nomeCategoria [(ngModel)] = "categorias.nome" name="nome"></label><br>
+
+    <label>ATIVO
+        <input #ativoCategoria [(ngModel)] = "categorias.ativo" name="ativo">
+    </label><br>
+
+<br>
+<button mat-raised-button (click)="save()" color="primary">
+    SALVAR
+</button>
+<button mat-raised-button (click)="saida()">
+    CANCELAR
+</button>
+
+</form>
+</div>
+-->

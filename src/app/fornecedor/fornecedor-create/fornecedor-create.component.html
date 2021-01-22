@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>NOVO FORNECEDOR</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" 
+            [(ngModel)] = "fornecedores.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" 
+            [(ngModel)] = "fornecedores.telefone" name="telefone">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CNPJ" 
+            [(ngModel)] = "fornecedores.cnpj" name="cnpj">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" 
+            [(ngModel)] = "fornecedores.email" name="email">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="save()" color="primary">
+        SALVAR
+    </button>
+    <button mat-raised-button (click)="saida()">
+        CANCELAR
+    </button>
+</mat-card>
+
