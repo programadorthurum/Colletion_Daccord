@@ -53,6 +53,16 @@ import { FornecedorCreateComponent } from './fornecedor/fornecedor-create/fornec
 import { FornecedorListarComponent } from './fornecedor/fornecedor-listar/fornecedor-listar.component';
 import { FornecedorUpdateComponent } from './fornecedor/fornecedor-update/fornecedor-update.component';
 import { FornecedorSearchComponent } from './fornecedor/fornecedor-search/fornecedor-search.component';
+import { VendasComponent } from './vendas/vendas.component';
+import { VendasCreateComponent } from './vendas/vendas-create/vendas-create.component';
+import { VendasListarComponent } from './vendas/vendas-listar/vendas-listar.component';
+import { VendasUpdateComponent } from './vendas/vendas-update/vendas-update.component';
+import { VendasSearchComponent } from './vendas/vendas-search/vendas-search.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { FaqsCreateComponent } from './faqs/faqs-create/faqs-create.component';
+import { FaqsListarComponent } from './faqs/faqs-listar/faqs-listar.component';
+import { FaqsUpdateComponent } from './faqs/faqs-update/faqs-update.component';
+import { FaqsSearchComponent } from './faqs/faqs-search/faqs-search.component';
 
 registerLocaleData(localePt);
 
@@ -102,6 +112,16 @@ registerLocaleData(localePt);
     FornecedorListarComponent,
     FornecedorUpdateComponent,
     FornecedorSearchComponent,
+    VendasComponent,
+    VendasCreateComponent,
+    VendasListarComponent,
+    VendasUpdateComponent,
+    VendasSearchComponent,
+    FaqsComponent,
+    FaqsCreateComponent,
+    FaqsListarComponent,
+    FaqsUpdateComponent,
+    FaqsSearchComponent,
 
   ],
   providers: [{

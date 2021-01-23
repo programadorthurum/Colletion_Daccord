@@ -15,7 +15,20 @@ export class ProdutosComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
+    this.getProdutos();
    }
+
+   getProdutos(): void {
+    this.produtoService.getProdutos()
+    .subscribe(produtos => this.produtos = produtos);
+  }
+
+  delete(produto: Produto): void {
+    this.produtos = this.produtos.filter(h => h !== produto);
+    this.produtoService.deleteProduto(produto).subscribe();
+  }
+
+
   //Menu de navegação
   navigateToProdutoCreate(): void{
     this.router.navigate(['/produto/create'])

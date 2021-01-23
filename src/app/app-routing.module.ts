@@ -26,6 +26,19 @@ import { FornecedorListarComponent } from './fornecedor/fornecedor-listar/fornec
 import { FornecedorUpdateComponent } from './fornecedor/fornecedor-update/fornecedor-update.component';
 import { FornecedorSearchComponent } from './fornecedor/fornecedor-search/fornecedor-search.component';
 
+
+import { VendasComponent } from './vendas/vendas.component';
+import { VendasCreateComponent } from './vendas/vendas-create/vendas-create.component';
+import { VendasListarComponent } from './vendas/vendas-listar/vendas-listar.component';
+import { VendasUpdateComponent } from './vendas/vendas-update/vendas-update.component';
+import { VendasSearchComponent } from './vendas/vendas-search/vendas-search.component';
+
+import { FaqsComponent } from './faqs/faqs.component';
+import { FaqsCreateComponent } from './faqs/faqs-create/faqs-create.component';
+import { FaqsListarComponent } from './faqs/faqs-listar/faqs-listar.component';
+import { FaqsUpdateComponent } from './faqs/faqs-update/faqs-update.component';
+import { FaqsSearchComponent } from './faqs/faqs-search/faqs-search.component';
+
 const routes: Routes = [
 
   //{ path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -72,6 +85,24 @@ const routes: Routes = [
   component: ClienteUpdateComponent
   },
 
+  { path: 'faq', 
+  component: FaqsComponent 
+  },
+  { path: "faq/create",
+  component: FaqsCreateComponent
+  },
+  { path: "faq/listar",
+  component: FaqsListarComponent
+  },
+  { path: "faq/search",
+  component: FaqsSearchComponent
+  },
+  { path: "faq/update/alterar/:id",
+  component: FaqsUpdateComponent
+  },
+  { path: "faq/update/consultar/:id",
+  component: FaqsUpdateComponent
+  },
 
   { path: 'fornecedor', 
   component: FornecedorComponent 
@@ -82,7 +113,7 @@ const routes: Routes = [
   { path: "fornecedor/listar",
   component: FornecedorListarComponent
   },
-  { path: "fornecedor/search/alterar/:id",
+  { path: "fornecedor/search/",
   component: FornecedorSearchComponent
   },
   { path: "fornecedor/update/consultar/:id",
@@ -105,9 +136,32 @@ const routes: Routes = [
   { path: "produto/search",
   component: ProdutoSearchComponent
   },
-  { path: "produto/update",
+  { path: "produto/update/consultar/:id",
   component: ProdutoUpdateComponent
   },
+  { path: "produto/update/alterar/:id",
+  component: ProdutoUpdateComponent
+  },
+
+  { path: 'vendas', 
+  component: VendasComponent 
+  },
+  { path: "vendas/create",
+  component: VendasCreateComponent
+  },
+  { path: "vendas/listar",
+  component: VendasListarComponent
+  },
+  { path: "vendas/search",
+  component: VendasSearchComponent
+  },
+  { path: "vendas/update/alterar/:id",
+  component: VendasUpdateComponent
+  },
+  { path: "vendas/update/consultar/:id",
+  component: VendasUpdateComponent
+  },
+
 
 ];
 

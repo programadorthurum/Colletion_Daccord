@@ -1,38 +1,28 @@
+<mat-card>
+    <mat-card-title>ALTERAR PRODUTO</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" 
+            [(ngModel)] = "produtos.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" 
+            [(ngModel)] = "produtos.descricao" name="descricao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço Unitário" 
+            [(ngModel)] = "produtos.preco_unitario" name="preco_unitario">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Unidade" 
+            [(ngModel)] = "produtos.unidade" name="unidade">
+        </mat-form-field>
+    </form>
 
-<h2>ALTERAR PRODUTO</h2>
-
-<!--
-<div>
-    <form (ngSubmit)= "onSubmit()">
-    <label >Nome
-        <input #nomeProduto [(ngModel)] = "produto.nome" name="nome"></label><br>
-
-    <label>Descrição
-        <input #descricaoProduto [(ngModel)] = "produto.descricao" name="descricao">
-    </label><br>
-
-    <label>Preço Unitário
-        <input #preco_unitarioProduto [(ngModel)] = "produto.preco_unitario" name="preco_unitario">
-    </label><br>
-
-    <label >Unidade
-        <input #unidadeProduto [(ngModel)] = "produto.unidade" name="unidade">
-    </label><br>
-
-
-<button mat-raised-button (click)="save()" color="primary">
-    SALVAR
-</button>
-<button mat-raised-button (click)="saida()">
-    CANCELAR
-</button>
-
-</form>
-</div>
--->
-
-<div>
+    <button mat-raised-button (click)="updateProduto()" color="primary">
+        SALVAR
+    </button>
     <button mat-raised-button (click)="saida()">
         CANCELAR
     </button>
-</div>
+</mat-card>

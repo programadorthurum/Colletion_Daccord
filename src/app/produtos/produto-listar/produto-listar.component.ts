@@ -17,13 +17,7 @@ produtos: Produto[];
   ngOnInit(): void {
     this.getProdutos();
   }
-  navigateToProdutoListar(): void{
-    this.router.navigate(['/produto/listar'])
-   }  
 
-  saida(): void{
-    this.router.navigate(["produto"])
-  }
   getProdutos(): void {
     this.produtoService.getProdutos()
     .subscribe(produtos => this.produtos = produtos);
@@ -36,6 +30,10 @@ produtos: Produto[];
 
   navigateToProdutoUpdate(){
     this.router.navigate(['/produto/update'])
+  }
+
+  saida(): void{
+    this.router.navigate(["produto"])
   }
 
 }

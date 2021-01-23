@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/produto';
 import { ProdutoService } from 'src/app/produto.service';
 
@@ -9,13 +9,22 @@ import { ProdutoService } from 'src/app/produto.service';
   styleUrls: ['./produto-update.component.css']
 })
 export class ProdutoUpdateComponent implements OnInit {
-  submitted: boolean = false;
-  id: number;
-  produtos: Produto;
+  produtos: Produto= new Produto();
 
-  constructor(private router: Router, private produtoService: ProdutoService) { }
+  constructor(private route: ActivatedRoute,
+              private router: Router, 
+              private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id')
+    this.produtoService.readById(id).subscribe(produto => {
+      this.produtos = produto
+    });
+  }
+
+  updateProduto(){
+    this.produtoService.updateProduto(this.produtos).subscribe();
+    this.saida();
   }
 
   saida(): void{

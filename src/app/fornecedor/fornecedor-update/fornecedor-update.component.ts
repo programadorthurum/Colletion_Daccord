@@ -28,7 +28,7 @@ export class FornecedorUpdateComponent implements OnInit {
   }
 
   saida(){
-    this.router.navigate(["categoria"])
+    this.router.navigate(["fornecedor"])
    }
 
 }

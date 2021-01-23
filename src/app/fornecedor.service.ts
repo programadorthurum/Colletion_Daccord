@@ -24,7 +24,7 @@ export class FornecedorService {
     return this.http.get<Fornecedor[]>(this.url)
       .pipe(
         tap(_ => this.log('fetched fornecedor')),
-        catchError(this.handleError<Fornecedor[]>('getCategorias', []))
+        catchError(this.handleError<Fornecedor[]>('getFornecedores', []))
       );
   }
 
@@ -46,6 +46,15 @@ export class FornecedorService {
     const url = `${this.url}/${fornecedor.id}`
     return this.http.put<Fornecedor>(url, fornecedor)
   }
+
+    /** PUT: update the Fornecedor on the server */
+    updateFornecedor(Fornecedor: Fornecedor): Observable<any> {
+      return this.http.put(`${this.url}/alterar/${Fornecedor.id}`, Fornecedor, this.httpOptions).pipe(
+        tap(_ => this.log(`updated Fornecedor id=${Fornecedor.id}`)),
+        catchError(this.handleError<any>('updateFornecedor'))
+      );
+    }
+  
 
   /** GET Fornecedor by id. Return `undefined` when id not found */
   getFornecedorNo404<Data>(id: number): Observable<Fornecedor> {
@@ -80,7 +89,7 @@ export class FornecedorService {
       tap(x => x.length ?
          this.log(`found fornecedor matching "${term}"`) :
          this.log(`no fornecedor matching "${term}"`)),
-      catchError(this.handleError<Fornecedor[]>('searchcategoria', []))
+      catchError(this.handleError<Fornecedor[]>('searchfornecedor', []))
     );
   }
 
@@ -102,14 +111,6 @@ export class FornecedorService {
     return this.http.delete<Fornecedor>(url, this.httpOptions).pipe(
       tap(_ => this.log(`deleted fornecedor id=${id}`)),
       catchError(this.handleError<Fornecedor>('deleteCategoria'))
-    );
-  }
-
-  /** PUT: update the Fornecedor on the server */
-  updateFornecedor(Fornecedor: Fornecedor): Observable<any> {
-    return this.http.put(`${this.url}/alterar/${Fornecedor.id}`, Fornecedor, this.httpOptions).pipe(
-      tap(_ => this.log(`updated Fornecedor id=${Fornecedor.id}`)),
-      catchError(this.handleError<any>('updateCategoria'))
     );
   }
 

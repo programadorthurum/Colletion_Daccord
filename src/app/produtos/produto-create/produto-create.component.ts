@@ -19,10 +19,6 @@ export class ProdutoCreateComponent implements OnInit {
 
   ngOnInit(): void {
    }
-//Apenas teste
-   createProduto(): void{
-    this.produtoService.showMessage("Produto cadastrado com sucesso!!!")
-   }
 
    save(){
      this.produtoService.addProduto(this.produto).subscribe();

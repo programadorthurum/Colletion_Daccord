@@ -31,6 +31,19 @@ export class ProdutoService {
     })
   }
 
+  //metodo que lê por id
+  readById(id: string): Observable<Produto> {
+    const url = `${this.url}/consultar/${id}`
+    return this.http.get<Produto>(url)
+  }
+
+  //metodo alterar
+  update(produto: Produto): Observable<Produto> {
+    const url = `${this.url}/alterar/${produto.id}`
+    return this.http.put<Produto>(url, produto)
+  }
+
+
  /** GET produtos from the server */
  getProdutos(): Observable<Produto[]> {
    return this.http.get<Produto[]>(this.url)
@@ -99,9 +112,9 @@ export class ProdutoService {
  }
 
  /** PUT: update the Produto on the server */
- updateProduto(Produto: Produto): Observable<any> {
-   return this.http.put(this.url, Produto, this.httpOptions).pipe(
-     tap(_ => this.log(`updated Produto id=${Produto.id}`)),
+ updateProduto(produto: Produto): Observable<any> {
+   return this.http.put(`${this.url}/alterar/${produto.id}`, produto, this.httpOptions).pipe(
+     tap(_ => this.log(`updated Produto id=${produto.id}`)),
      catchError(this.handleError<any>('updateProduto'))
    );
  }

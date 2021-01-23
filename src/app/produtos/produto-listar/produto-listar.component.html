@@ -20,10 +20,12 @@
           <td>{{produto.descricao}}</td>
           <td>{{produto.preco_unitario | currency: 'BRL'}}</td>
           <td>{{produto.unidade}}</td>
-          <td><button mat-cell (click)="navigateToProdutoUpdate()" color="warn" class="btn btn-danger" style="margin-left: 10px">
+
+          <td><button mat-cell routerLink="/produto/update/alterar/{{produto.id}}" color="warn" class="btn btn-danger" style="margin-left: 10px">
             <i class= "material-icons edit">
                 edit
             </i></button>
+          </td>
           <td><button mat-cell (click)="delete(produto)" color="warn" class="btn btn-danger" style="margin-left: 10px">
             <i class= "material-icons delete">
               delete
@@ -35,23 +37,7 @@
   </div>
 </div>
 
-<!--<h2>LISTAS DE PRODUTOS</h2>-->
-<!--
-<ul class="produto">
-    <li *ngFor="let produto of produtos">
-      <a routerLink="/detail/{{produto.id}}">
-        <span class="badge">{{produto.id}}</span> {{produto.nome}}
-      </a>
-      <button class="delete" title="delete produto"
-      (click)="delete(produto)">X</button>
-    </li>
-  </ul>
 
--->
-<br>
-<button mat-raised-button color="warn" (click)="saida()">
-    RETORNAR
-</button>
 
 
   

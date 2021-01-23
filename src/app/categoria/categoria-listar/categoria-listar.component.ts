@@ -27,10 +27,6 @@ getCategorias(): void {
     this.categoriaService.deleteCategoria(categoria).subscribe();
   }
 
-  updateCategoria(){
-    this.router.navigate(['/categoria/update/consultar/'])
-  }
-
   saida(): void{
     this.router.navigate(["categoria"])
   }

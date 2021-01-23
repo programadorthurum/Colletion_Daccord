@@ -48,6 +48,14 @@ export class CategoriaService {
     return this.http.put<Categoria>(url, categoria)
   }
 
+  /** PUT: update the Categoria on the server */
+  updateCategoria(categoria: Categoria): Observable<any> {
+    return this.http.put(`${this.url}/alterar/${categoria.id}`, categoria, this.httpOptions).pipe(
+      tap(_ => this.log(`updated Categoria id=${categoria.id}`)),
+      catchError(this.handleError<any>('updateCategoria'))
+    );
+  }  
+
   /** GET Categoria by id. Return `undefined` when id not found */
   getCategoriaNo404<Data>(id: number): Observable<Categoria> {
     const url = `${this.url}/?id=${id}`;
@@ -103,14 +111,6 @@ export class CategoriaService {
     return this.http.delete<Categoria>(url, this.httpOptions).pipe(
       tap(_ => this.log(`deleted categoria id=${id}`)),
       catchError(this.handleError<Categoria>('deleteCategoria'))
-    );
-  }
-
-  /** PUT: update the Categoria on the server */
-  updateCategoria(categoria: Categoria): Observable<any> {
-    return this.http.put(`${this.url}/alterar/${categoria.id}`, categoria, this.httpOptions).pipe(
-      tap(_ => this.log(`updated Categoria id=${categoria.id}`)),
-      catchError(this.handleError<any>('updateCategoria'))
     );
   }
 

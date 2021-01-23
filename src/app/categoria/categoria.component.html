@@ -3,9 +3,6 @@
 <button mat-raised-button (click)="navigateToCategoriaCreate()">
     ADICIONAR
 </button>
-<button mat-raised-button (click)="navigateToCategoriaUpdate()">
-    ALTERAR
-</button>
 <button mat-raised-button (click)="navigateToCategoriaSearch()">
     PROCURAR
 </button>
@@ -15,17 +12,3 @@
 <button mat-raised-button (click)="navigateToCategoriaCreate()">
   EXCLUIR
 </button>
-
-
-<!--
-<h2>CATEGORIA</h2>
-<ul class="categoria">
-  <li *ngFor="let categoria of categoria">
-    <a routerLink="/detail/{{categoria.id}}">
-      <span class="badge">{{categoria.id}}</span> {{categoria.nome}}
-    </a>
-    <button class="delete" title="delete categoria"
-    (click)="delete(categoria)">X</button>
-  </li>
-</ul>
--->
