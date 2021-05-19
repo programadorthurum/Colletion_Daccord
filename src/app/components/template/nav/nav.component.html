@@ -2,52 +2,43 @@
     <mat-sidenav class="sidenav" mode="side" opened
         fixedInViewport= "true" fixedTopGap="64">
         <mat-nav-list class="nav-list">
-        <a mat-list-item routerLink="/">
+        <a mat-list-item>
             <i class= "material-icons">
-                home
             </i>
-            INÍCIO
+            MENU
         </a>
 
-        <a mat-list-item routerLink="/categoria">
+        <a mat-list-item routerLink="">
             <i class= "material-icons">
             </i>
-            CATEGORIA
+            MUSICAS
         </a>
-        <a mat-list-item routerLink="/clientes">
+        <a mat-list-item routerLink="">
             <i class= "material-icons">
             </i>
-            CLIENTES
+            ARTISTAS
         </a>
-        <a mat-list-item routerLink="/fornecedor">
+        <a mat-list-item routerLink="">
+            <i class= "material-icons">                
+            </i>
+            GÊNEROS
+        </a>
+        <a mat-list-item routerLink="/configuration">
             <i class= "material-icons">
             </i>
-            FORNECEDOR
+            CONFIGURAÇÕES
         </a>
-        <a mat-list-item routerLink="/itens_venda">
-            <i class= "material-icons">
-            </i>
-            ITENS DE VENDA
-        </a>
-        <a mat-list-item routerLink="/marca">
-            <i class= "material-icons">
-            </i>
-            MARCA
-        </a>
-        <a mat-list-item routerLink="/produto">
-            <i class= "material-icons">
-            </i>
-            PRODUTOS
-        </a>
-        <a mat-list-item routerLink="/vendas">
-            <i class= "material-icons">
-            </i>
-            VENDAS
-        </a>
+
+        <span>
+            <img class="logo" src="assets/img/violao.png" alt = "logo">
+        </span>
+
     </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content">
         <router-outlet></router-outlet>
-       <!-- <app-messages></app-messages>-->
+       <app-messages></app-messages>
     </mat-sidenav-content>
 </mat-sidenav-container>>
+
+

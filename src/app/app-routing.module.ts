@@ -8,36 +8,13 @@ import { ClienteListarComponent } from './clientes/cliente-listar/cliente-listar
 import { ClienteSearchComponent } from './clientes/cliente-search/cliente-search.component';
 import { ClienteUpdateComponent } from './clientes/cliente-update/cliente-update.component';
 
-import { CategoriaComponent } from './categoria/categoria.component';
-import { CategoriaCreateComponent } from './categoria/categoria-create/categoria-create.component';
-import { CategoriaListarComponent } from './categoria/categoria-listar/categoria-listar.component';
-import { CategoriaSearchComponent } from './categoria/categoria-search/categoria-search.component';
-import { CategoriaUpdateComponent } from './categoria/categoria-update/categoria-update.component';
+import { UserComponent } from './user/user.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserListarComponent } from './user/user-listar/user-listar.component';
+import { UserUpdateComponent } from './user/user-update/user-update.component';
+import { UserSearchComponent } from './user/user-search/user-search.component';
 
-import { ProdutosComponent } from './produtos/produtos.component';
-import { ProdutoCreateComponent } from './produtos/produto-create/produto-create.component';
-import { ProdutoListarComponent } from './produtos/produto-listar/produto-listar.component';
-import { ProdutoSearchComponent } from './produtos/produto-search/produto-search.component';
-import { ProdutoUpdateComponent } from './produtos/produto-update/produto-update.component';
-
-import { FornecedorComponent } from './fornecedor/fornecedor.component';
-import { FornecedorCreateComponent } from './fornecedor/fornecedor-create/fornecedor-create.component';
-import { FornecedorListarComponent } from './fornecedor/fornecedor-listar/fornecedor-listar.component';
-import { FornecedorUpdateComponent } from './fornecedor/fornecedor-update/fornecedor-update.component';
-import { FornecedorSearchComponent } from './fornecedor/fornecedor-search/fornecedor-search.component';
-
-
-import { VendasComponent } from './vendas/vendas.component';
-import { VendasCreateComponent } from './vendas/vendas-create/vendas-create.component';
-import { VendasListarComponent } from './vendas/vendas-listar/vendas-listar.component';
-import { VendasUpdateComponent } from './vendas/vendas-update/vendas-update.component';
-import { VendasSearchComponent } from './vendas/vendas-search/vendas-search.component';
-
-import { FaqsComponent } from './faqs/faqs.component';
-import { FaqsCreateComponent } from './faqs/faqs-create/faqs-create.component';
-import { FaqsListarComponent } from './faqs/faqs-listar/faqs-listar.component';
-import { FaqsUpdateComponent } from './faqs/faqs-update/faqs-update.component';
-import { FaqsSearchComponent } from './faqs/faqs-search/faqs-search.component';
+import { ConfigurationComponent } from './configuration/configuration.component';
 
 const routes: Routes = [
 
@@ -45,25 +22,6 @@ const routes: Routes = [
 
   { path:'',
     component: HomeComponent
-  },
-
-  { path: 'categoria', 
-  component: CategoriaComponent 
-  },
-  { path: "categoria/create",
-  component: CategoriaCreateComponent
-  },
-  { path: "categoria/listar",
-  component: CategoriaListarComponent
-  },
-  { path: "categoria/search",
-  component: CategoriaSearchComponent
-  },
-  { path: "categoria/update/consultar/:id",
-  component: CategoriaUpdateComponent
-  },
-  { path: "categoria/update/alterar/:id",
-  component: CategoriaUpdateComponent
   },
 
   { path: 'clientes', 
@@ -85,83 +43,29 @@ const routes: Routes = [
   component: ClienteUpdateComponent
   },
 
-  { path: 'faq', 
-  component: FaqsComponent 
-  },
-  { path: "faq/create",
-  component: FaqsCreateComponent
-  },
-  { path: "faq/listar",
-  component: FaqsListarComponent
-  },
-  { path: "faq/search",
-  component: FaqsSearchComponent
-  },
-  { path: "faq/update/alterar/:id",
-  component: FaqsUpdateComponent
-  },
-  { path: "faq/update/consultar/:id",
-  component: FaqsUpdateComponent
+  { path: 'configuration', 
+  component: ConfigurationComponent 
   },
 
-  { path: 'fornecedor', 
-  component: FornecedorComponent 
+  { path: 'user', 
+  component: UserComponent 
   },
-  { path: "fornecedor/create",
-  component: FornecedorCreateComponent
+  { path: "user/create",
+  component: UserCreateComponent
   },
-  { path: "fornecedor/listar",
-  component: FornecedorListarComponent
+  { path: "user/listar",
+  component: UserListarComponent
   },
-  { path: "fornecedor/search/",
-  component: FornecedorSearchComponent
+  { path: "user/search/",
+  component: UserSearchComponent
   },
-  { path: "fornecedor/update/consultar/:id",
-  component: FornecedorUpdateComponent
+  { path: "user/update/consultar/:id",
+  component: UserUpdateComponent
   },
   
-  { path: "fornecedor/update/alterar/:id",
-  component: FornecedorUpdateComponent
+  { path: "user/update/alterar/:id",
+  component: UserUpdateComponent
   },
-
-  { path: "produto",
-  component: ProdutosComponent
-  },
-  { path: "produto/create",
-  component: ProdutoCreateComponent
-  },
-  { path: "produto/listar",
-  component: ProdutoListarComponent
-  },
-  { path: "produto/search",
-  component: ProdutoSearchComponent
-  },
-  { path: "produto/update/consultar/:id",
-  component: ProdutoUpdateComponent
-  },
-  { path: "produto/update/alterar/:id",
-  component: ProdutoUpdateComponent
-  },
-
-  { path: 'vendas', 
-  component: VendasComponent 
-  },
-  { path: "vendas/create",
-  component: VendasCreateComponent
-  },
-  { path: "vendas/listar",
-  component: VendasListarComponent
-  },
-  { path: "vendas/search",
-  component: VendasSearchComponent
-  },
-  { path: "vendas/update/alterar/:id",
-  component: VendasUpdateComponent
-  },
-  { path: "vendas/update/consultar/:id",
-  component: VendasUpdateComponent
-  },
-
 
 ];
 
