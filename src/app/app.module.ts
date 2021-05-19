@@ -44,6 +44,15 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
 import { UserUpdateComponent } from './user/user-update/user-update.component';
 
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { UserRead2Component } from './components/user/user-read2/user-read2.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
+import { ArtistsComponent } from './artists/artists.component';
+import { ArtistCreateComponent } from './artists/artist-create/artist-create.component';
+import { ArtistListComponent } from './artists/artist-list/artist-list.component';
+import { ArtistSearchComponent } from './artists/artist-search/artist-search.component';
+import { ArtistUpdateComponent } from './artists/artist-update/artist-update.component';
 
 registerLocaleData(localePt);
 
@@ -64,6 +73,8 @@ registerLocaleData(localePt);
     MatSnackBarModule,
     MatTableModule,
     MatToolbarModule,
+    MatPaginatorModule,
+    MatSortModule,
 
   ],
   declarations: [
@@ -84,6 +95,12 @@ registerLocaleData(localePt);
     UserSearchComponent,
     UserUpdateComponent,
     ConfigurationComponent,
+    UserRead2Component,
+    ArtistsComponent,
+    ArtistCreateComponent,
+    ArtistListComponent,
+    ArtistSearchComponent,
+    ArtistUpdateComponent,
 
   ],
   providers: [{

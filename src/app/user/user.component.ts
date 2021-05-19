@@ -56,5 +56,9 @@ export class UserComponent implements OnInit {
     this.router.navigate(['user']);
   }
 
+  saida(): void{
+    this.router.navigate(["user"])
+  }
+
 }
 

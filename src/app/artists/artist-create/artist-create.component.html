@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-title>CADASTRAR ARTISTA</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome do Artista" 
+            [(ngModel)] = "artists.artist_name" name="artist_name">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input matInput placeholder="Artist Genre" 
+            [(ngModel)] = "artists.artist_genre" name="artist_genre">
+        </mat-form-field>
+        <div>
+        <input type="file" (change) = "inputFileChange($event)"/>
+        </div>
+<!--
+        <mat-form-field>
+            <input matInput placeholder="Confirmar Senha" 
+            [(ngModel)] = "artist.confirmaSenha" name="confirmaSenha">
+        </mat-form-field>
+-->
+
+    </form>
+
+    <button mat-raised-button (click)="save()">
+        SALVAR
+    </button>
+    <button mat-raised-button (click)="saida()">
+        CANCELAR
+    </button>
+</mat-card>
+
+
+

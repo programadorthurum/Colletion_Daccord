@@ -2,6 +2,12 @@ import { HomeComponent } from './views/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule  } from '@angular/router';
 
+import { ArtistsComponent } from './artists/artists.component';
+import { ArtistCreateComponent } from './artists/artist-create/artist-create.component';
+import { ArtistListComponent } from './artists/artist-list/artist-list.component';
+import { ArtistSearchComponent } from './artists/artist-search/artist-search.component';
+import { ArtistUpdateComponent } from './artists/artist-update/artist-update.component';
+
 import { ClientesComponent } from './clientes/clientes.component';
 import { ClienteCreateComponent } from './clientes/cliente-create/cliente-create.component';
 import { ClienteListarComponent } from './clientes/cliente-listar/cliente-listar.component';
@@ -22,6 +28,25 @@ const routes: Routes = [
 
   { path:'',
     component: HomeComponent
+  },
+
+  { path: 'artists', 
+  component: ArtistsComponent 
+  },
+  { path: "artists/create",
+  component: ArtistCreateComponent
+  },
+  { path: "artists/listar",
+  component: ArtistListComponent
+  },
+  { path: "artists/search",
+  component: ArtistSearchComponent
+  },
+  { path: "artists/update/alterar/:id",
+  component: ArtistUpdateComponent
+  },
+  { path: "artists/update/consultar/:id",
+  component: ArtistUpdateComponent
   },
 
   { path: 'clientes', 

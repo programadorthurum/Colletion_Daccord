@@ -10,7 +10,7 @@ import { UserService } from 'src/app/user.service';
 })
 export class UserListarComponent implements OnInit {
   users: User[];
-
+  displayedColumns = ['id', 'nome']
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -18,7 +18,7 @@ export class UserListarComponent implements OnInit {
   }
 
   saida(): void{
-    this.router.navigate(["user"])
+    this.router.navigate(["/"])
   }
   getUsers(): void {
     this.userService.getUsers()
