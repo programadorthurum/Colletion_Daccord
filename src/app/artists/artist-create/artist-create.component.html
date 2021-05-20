@@ -10,18 +10,13 @@
             <input matInput placeholder="Artist Genre" 
             [(ngModel)] = "artists.artist_genre" name="artist_genre">
         </mat-form-field>
+        
         <div>
-        <input type="file" (change) = "inputFileChange($event)"/>
+          <input type="file" (change) = "inputFileChange($event)"/>
         </div>
-<!--
-        <mat-form-field>
-            <input matInput placeholder="Confirmar Senha" 
-            [(ngModel)] = "artist.confirmaSenha" name="confirmaSenha">
-        </mat-form-field>
--->
 
     </form>
-
+    <br>
     <button mat-raised-button (click)="save()">
         SALVAR
     </button>
